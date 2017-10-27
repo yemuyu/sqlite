@@ -530,7 +530,7 @@ static void translateColumnToCopy(
   for(; iStart<iEnd; iStart++, pOp++){
     if( pOp->p1!=iTabCur ) continue;
     if( pOp->opcode==OP_Column ){
-      pOp->opcode = OP_Copy;
+      pOp->opcode = OP_SCopy;
       pOp->p1 = pOp->p2 + iRegister;
       pOp->p2 = pOp->p3;
       pOp->p3 = 0;
